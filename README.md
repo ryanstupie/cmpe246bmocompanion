@@ -1,1 +1,1 @@
-#CMPE 246 Group 13 Website
+CMPE 246 Group 13 Website
