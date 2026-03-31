@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPE 246 Group 13</title>
+    <style>
+        body {
+            background-color: #63bda5; 
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            text-align: center;
+            color: #333;
+        }
+
+        
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background-color: #009688;
+            padding: 10px 30px;
+            box-shadow: 0 2px 10px white;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            z-index: 1000;
+        }
+
+        .top-bar img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        
+        .nav-links a:hover {
+            color: #63bda5;
+            text-decoration: underline;
+        }
+
+        
+        .page-title {
+            color: white;
+            font-size: 2.5rem;
+            margin: 40px 0 20px 0;
+            text-align: center;
+        }
+
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
+        }
+
+
+        .grid-block {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: left; 
+        }
+
+        .grid-block h3 {
+            color: #009688;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .grid-block p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        .grid-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .custom-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        .custom-table th {
+            background-color: #009688;
+            color: white;
+        }
+
+        .action-button {
+            display: inline-block;
+            background-color: #009688;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .action-button:hover {
+            background-color: #00796b;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <img src="images/aignereatedslop.png" alt="Site Logo">
+        
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="functions.html">Specifications</a>
+            <a href="Demonstration.html">Demonstration</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Key features</h1>
+        
+        <div class="grid-container">
+            <div class="grid-block">
+                <img src="images/llmfunc.png" alt="ollama logo">
+                <h3>Local LLM</h3>
+                <p>Utilizing the Ollama llama 3.2:1b, BMO has the ability to generate responses locally.</p>
+            </div>
+            <div class="grid-block">
+                <img src="images/textfunc.png" alt="bmo talking">
+                <h3>Text detection and text to speech</h3>
+                <p>With OpenAI Faster Whisper and Piper TTS, BMO can hear and talk to you!</p>
+            </div>
+            <div class="grid-block">
+                <img src="images/facefunc.png" alt="goofy bmo">
+                <h3>Lively expressions</h3>
+                <p>BMO has a range of expressions to fit with the mood, have speaking fun with BMO!</p>
+            </div>
+            
+            <div class="grid-block">
+                <img src="images/camerafunc.png" alt="camera">
+                <h3>Camera</h3>
+                <p>With the Pi Ai Camera, not only can you take selfies, BMO will be watching you and make sure you are LOCKED IN.</p>
+            </div>
+            <div class="grid-block">
+                <img src="images/gamingfunc.png" alt="game selection">
+                <h3>Gaming</h3>
+                <p>With ES-DE and RetroArch, you can go through a selection of Retrogames and play on the go!</p>
+            </div>
+            <div class="grid-block">
+                <img src="images/musicfunc.png" alt="music">
+                <h3>Music</h3>
+                <p>BMO can play some fire music for you with the Spotify Webplay API!</p>
+            </div>
+        </div>
+
+
+        <div style="text-align: center;">
+            <a href="Demonstration.html" class="action-button">Show me!</a>
+        </div>
+
+
+        <h1 class="page-title">Bill of materials (BOM)</h1>
+        <table class="custom-table">
+            <tr>
+                <th>Item Description</th>
+                <th>Cost (CAD)</th>
+            </tr>
+            <tr><td>Raspberry Pi 4 Model B (4GBs RAM) Starter Kit</td><td>Worth $200.00</td></tr>
+            <tr><td>Raspberry Pi AI Camera IMX500</td><td>$107.00</td></tr>
+            <tr><td>ESP32 Microcontroller</td><td>$15</td></tr>
+            <tr><td>5 Inch Touchscreen Display</td><td>$49.00</td></tr>
+            <tr><td>Small USB Speaker</td><td>$17.00</td></tr>
+            <tr><td>Small USB Microphone</td><td>$7.50</td></tr>
+            <tr><td>Lipo Cell Battery Module</td><td>$31.65</td></tr>
+            <tr><td>2 Pack Lipo Cells</td><td>$22.00</td></tr>
+            <tr><td>USB Splitter Cable Extension </td><td>$9.00</td></tr>
+            <tr><td>2 Pack USB Retro Controllers</td><td>$19.00</td></tr>
+            <tr><td>3D Printed Enclosure</td><td>~$40</td></tr>
+            <tr><td>Magnets, Screws, Glue, Soldering Station/Supplies, Buttons, LEDs, Workshop Tools, Sandpaper, Paint, etc</td><td>N/A</td></tr>
+        </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPE 246 Group 13</title>
+    <style>
+        body {
+            background-color: #63bda5; 
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            text-align: center;
+            color: #333;
+        }
+
+        
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background-color: #009688;
+            padding: 10px 30px;
+            box-shadow: 0 2px 10px white;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            z-index: 1000;
+        }
+
+        .top-bar img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        
+        .nav-links a:hover {
+            color: #63bda5;
+            text-decoration: underline;
+        }
+
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
+        }
+
+        .grid-block {
+            background-color: white;
+            padding: 15px; 
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center; 
+            gap: 15px; 
+            text-align: left; 
+        }
+
+        .grid-block video {
+            width: 45%; 
+            border-radius: 8px;
+        }
+
+        
+        .grid-text {
+            flex: 1;
+        }
+
+        .grid-text h3 {
+            color: #009688;
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-weight: bold;
+        }
+
+        .grid-text p {
+            color: #333;
+            line-height: 1.6;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-weight: medium;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <img src="images/aignereatedslop.png" alt="Site Logo">
+        
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="functions.html">Specifications</a>
+            <a href="Demonstration.html">Demonstration</a>
+        </nav>
+    </header>
+
+    <div class="grid-container">
+
+        <div class="grid-block">
+            <video controls>
+                <source src="videos/chattingmodevid.mp4" type="video/mp4">
+            </video>
+            <div class="grid-text">
+                <h3>Chatting mode</h3>
+                <p>Running the Ollama llama 3.2:1b, Piper TTS, and OpenAI Faster Whisper, BMO can not only converse but also have multiple face animations and runs completely local.</p>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <video controls>
+                <source src="videos/studymodevid.mp4" type="video/mp4">
+            </video>
+            <div class="grid-text">
+                <h3>Study mode</h3>
+                <p>In study mode, BMO tracks user's focus by using the Yolo v11 model and Pi AI camera, and uses a scoring mechanism to tell the user how focused they were.</p>
+            </div>
+        </div>
+
+
+        <div class="grid-block">
+            <video controls>
+                <source src="videos/gamevid.mov" type="video/mp4">
+            </video>
+            <div class="grid-text">
+                <h3>Gaming mode</h3>
+                <p>In gaming mode, BMO boots up ES-DE and allow users to select through a variety of retro games using the built in d-pad and you can game with friends!</p>
+            </div>
+        </div>
+
+        <div class="grid-block">
+            <video controls>
+                <source src="videos/Canvasfunction.mov" type="video/mp4">
+            </video>
+            <div class="grid-text">
+                <h3>Canvas feature</h3>
+                <p>Along with the different modes, BMO also has a Canvas feature allowing users to fetch their assignment due dates and grades in chat mode via the CanvasAPI.</p>
+            </div>
+        </div>
+
+    <div>
+
+</body>
+</html>
